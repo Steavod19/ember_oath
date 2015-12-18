@@ -1,3 +1,21 @@
+<nav>
+  {{#link-to index}}
+  home
+  {{/link-to}}
+
+  {{if session.isAuthenticated}}
+    <button {{action 'logout'}}>logout</button>
+  {{else}}
+    {{#link-to 'login'}}
+    login
+    {{/link-to}}
+  {{/if}}
+</nav>
+
+<hr/>
+
 <h2 id="title">Welcome to Ember</h2>
+
+
 
 {{outlet}}
